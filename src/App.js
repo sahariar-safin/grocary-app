@@ -95,7 +95,7 @@ const App = () => {
       <div className='app-background' ref={componentRef}>
         <h1>Grocery Billing App</h1>
         <div className='main-container'>
-          {person && <div>Hey <strong>{person.name.first}!</strong> Add your grocery items</div>}
+          {person && <div>Hey <strong>{person.name.first}! from {person.location.city} </strong>Phone no: {person.phone} <br />Add your grocery items</div>}
           <div className='add-item-box'>
             <input value={inputValue} onChange={(event) => setInputValue(event.target.value)} className='add-item-input' placeholder='Add an item' type='text' />
             <input value={inputPrice} onChange={(event) => setInputPrice(event.target.value)} className='add-item-input' placeholder='Add price' type='number' />
