@@ -71,6 +71,7 @@ body {
 input::placeholder {
   color: #ec645b;
 }
+
 input:focus {
   outline: 0;
 }
@@ -110,7 +111,7 @@ input:focus {
 
 .total {
   float: right;
-  padding: 10px;
+  padding: 0;
 }
 
 .quantity {
@@ -131,6 +132,7 @@ button {
   margin: 3px;
   color: #ec645b;
 }
+
 button:focus {
   outline: 0;
 }
@@ -141,4 +143,102 @@ button:hover {
 
 .completed {
   text-decoration: line-through;
+}
+
+.invoice-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  height: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  font-size: 16px;
+  line-height: 24px;
+  color: black !important;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
+.justify-center {
+  text-align: center;
+}
+
+.invoice-box table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+  color: black;
+}
+
+.invoice-box table td {
+  padding: 5px;
+  vertical-align: top;
+  color: black;
+}
+
+.invoice-box table tr td:nth-child(2) {
+  text-align: right;
+  color: black;
+}
+
+.invoice-box table tr.top table td {
+  padding-bottom: 20px;
+  color: black;
+}
+
+.invoice-box table tr.top table td.title {
+  font-size: 45px;
+  line-height: 45px;
+  color: rgb(3, 3, 3);
+}
+
+.invoice-box table tr.information table tr {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.invoice-box table tr.heading td {
+  background: #eee;
+  border: 1px solid rgb(0, 0, 0);
+  font-weight: bold;
+  color: black;
+}
+
+.invoice-box table tr.details td {
+  padding-bottom: 20px;
+  color: black;
+}
+
+.invoice-box table tr.item td {
+  border: 1px solid rgb(0, 0, 0);
+  color: black;
+}
+
+.invoice-box table tr.item.last td {
+  border-bottom: none;
+  color: black;
+}
+
+.invoice-box table tr.total td:nth-child(2) {
+  border-top: 2px solid rgb(0, 0, 0);
+  font-weight: bold;
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .invoice-box table tr.top table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: black;
+  }
+  .invoice-box table tr.information table td {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: black;
+  }
 }
